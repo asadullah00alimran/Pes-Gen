@@ -8,3 +8,9 @@ h1{
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
+
+@media print{
+    #print-btn{
+        display: none;
+    }
+}
