@@ -38,40 +38,40 @@ jQuery(document).ready(function(){
             <div class="row">\
                 <div class="col-md-4">\
                     <div class="form-group row">\
-                        <label\
-                            class="col-sm-5 col-form-label col-form-label-sm pl-4 text-dark text-left ">Medicine\
-                            Name*</label>\
-                        <div class="col-sm-7 pl-4">\
-                            <input type="text" class="patient_name form-control form-control-sm"\
-                                name="patient_name" required>\
+                        <div class="col-md-5">\
+                            <label for="">Medecine name*</label>\
+                        </div>\
+                        <div class="col-md-7">\
+                            <input type="text" class="form-control form-control-sm">\
                         </div>\
                     </div>\
                 </div>\
                 <div class="col-md-3">\
                     <div class="form-group row">\
-                        <label\
-                            class="col-sm-4 col-form-label col-form-label-sm pl-4 text-dark text-left ">Dose*</label>\
-                        <div class="col-sm-8 pl-4">\
-                            <input type="text" class="patient_name form-control form-control-sm"\
-                                name="patient_name" required>\
+                        <div class="col-md-3">\
+                            <label for="">Dose*</label>\
+                        </div>\
+                        <div class="col-md-9">\
+                            <input type="text" class="form-control form-control-sm">\
                         </div>\
                     </div>\
                 </div>\
                 <div class="col-md-2">\
                     <div class="form-group row">\
-                        <label\
-                            class="col-sm-4 col-form-label col-form-label-sm pl-4 text-dark text-left ">Course*</label>\
-                        <div class="col-sm-8 pl-4">\
-                            <input type="text" class="patient_name form-control form-control-sm"\
-                                name="patient_name" required>\
+                        <div class="col-md-5">\
+                            <label for="">Course*</label>\
+                        </div>\
+                        <div class="col-md-7">\
+                            <input type="text" class="form-control form-control-sm">\
                         </div>\
                     </div>\
                 </div>\
                 <div class="col-md-3">\
                     <div class="form-group row">\
-                        <label\
-                            class="col-sm-5 col-form-label col-form-label-sm pl-4 text-dark text-left ">Parameter*</label>\
-                        <div class="col-sm-7 pl-4">\
+                        <div class="col-md-4">\
+                            <label for="">Parameter*</label>\
+                        </div>\
+                        <div class="col-md-8">\
                             <select name="status" class="status form-control form-control-sm" required>\
                                 <option value="">Select Status</option>\
                                 <option value="1" class="">চলবে</option>\
@@ -85,4 +85,11 @@ jQuery(document).ready(function(){
         ';
         jQuery("#medecine_data").append(medecine_clone);
     });
+    jQuery("#print-btn").click(function(){
+        alert("Working");
+    });
+    jQuery(".print-btn").click(function(){
+        window.print();
+    });
+
 });
