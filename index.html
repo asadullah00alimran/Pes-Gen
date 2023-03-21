@@ -13,11 +13,15 @@
     <script src="custom.js"></script>
     <!--Custom  css link -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="row">
-        <div class="col-md-10 offset-md-1 my-3 p-5 bg-white border shadow-sm">
+        <div class="col-md-10 offset-md-1 mt-3 px-5 py-4 bg-white border shadow-sm">
             <h5>Prescribe By,</h5>
             <h1>Dr. Zahidul Islam Sajol</h1>
             <p>MBBS Dhaka</p>
@@ -25,121 +29,152 @@
     </div>
     <div class="row">
         <div class="col-md-10 offset-md-1 my-3 p-5 bg-white border shadow-sm">
-            <h5 class="text-dark">Generate Prescription</h5>
-            <hr class="text-success mt-0 mb-4">
+            <h6 class="mb-3 py-2 pl-2 bg-dark text-white">Patient Information</h6>
             <div class="row">
-                <div class="col-md-6">
-                    <h6 class="py-2 pl-2 bg-dark text-white">General Information</h6>
+                <div class="col-md-4">
                     <div class="form-group row">
-                        <div class="col-md-5">
-                            <label for="">Patient name *</label>
+                        <div class="col-md-3">
+                            <label for="">Name:</label>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-9">
                             <input type="text" class="form-control form-control-sm">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-5">
-                            <label for="">Patient Age *</label>
-                        </div>
-                        <div class="col-md-7">
-                            <input type="text" class="form-control form-control-sm">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-5">
-                            <label for="">Patient Date *</label>
-                        </div>
-                        <div class="col-md-7">
-                            <input type="date" class="text-dark form-control form-control-sm">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="">Age:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="">Date:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="text-success mt-0 mb-4">
+            <div class="row">
+                <div class="col-md-4 border-right">
                     <h6 class="py-2 pl-2 bg-dark text-white">Test Information</h6>
                     <div id="test_data">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <div class="col-md-5">
-                                        <label for="">Test name</label>
+                            <div class="col-md-1">
+                                <p class="text-end"><i class="fa-sharp fa-solid fa-syringe"></i></p>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control form-control-sm" placeholder="Test Name">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-7">
-                                        <input type="text" class="test_name form-control form-control-sm">
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control form-control-sm" placeholder="Test category">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-5">
-                                        <label for="">Test Category</label>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <input type="text" class="test_category form-control form-control-sm">
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="mb-5">
-                        <button class="add_test btn btn-sm btn-success"> Add More</button>
+                        <button class="add_test btn btn-sm btn-success"><i class="pr-2 fa-solid fa-circle-plus"></i>Add More</button>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <h6 class="py-2 pl-2 bg-dark text-white">Medecine Information</h6>
+                    <i class="px fa-solid fa-prescription"></i>
+                    <div id="medecine_data">
+                        <div class="ml-3 row">
+                            <div class="col-md-1 text-end">
+                                <p class="text-end"><i class="fa-solid fa-pills"></i></p>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control form-control-sm" placeholder="Medecine Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control form-control-sm" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <select name="status" class="status form-control form-control-sm" required>
+                                                    <option value="1" class="">দিন</option>
+                                                    <option value="2" class="">চলবে</option>
+                                                    <option value="3" class="">মাস</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <select name="status" class="status form-control form-control-sm" required>
+                                                    <option value="1" class=""> 1 + 1 + 1 </option>
+                                                    <option value="2" class=""> 1 + 0 + 1 </option>
+                                                    <option value="4" class=""> 1 + 0 + 0 </option>
+                                                    <option value="5" class=""> 0 + 0 + 1 </option>
+                                                    <option value="6" class=""> 1 + 1 + 1 + 1 </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <select name="status" class="status form-control form-control-sm" required>
+                                                    <option value="1" class=""> খাবার আগে </option>
+                                                    <option value="2" class="">খাবার পরে</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-medecine">
+                        <button class="mt-3 btn btn-sm btn-success add_medecine"><i class="pr-2 fa-solid fa-circle-plus"></i>Add More</button>
                     </div>
                 </div>
             </div>
-            <h6 class="py-2 pl-2 bg-dark text-white">Medecine Information</h6>
-            <div id="medecine_data">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group row">
-                            <div class="col-md-5">
-                                <label for="">Medecine name*</label>
-                            </div>
-                            <div class="col-md-7">
-                                <input type="text" class="form-control form-control-sm">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group row">
-                            <div class="col-md-3">
-                                <label for="">Dose*</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control form-control-sm">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group row">
-                            <div class="col-md-5">
-                                <label for="">Course*</label>
-                            </div>
-                            <div class="col-md-7">
-                                <input type="text" class="form-control form-control-sm">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group row">
-                            <div class="col-md-4">
-                                <label for="">Parameter*</label>
-                            </div>
-                            <div class="col-md-8">
-                                <select name="status" class="status form-control form-control-sm" required>
-                                    <option value="">Select Status</option>
-                                    <option value="1" class="">চলবে</option>
-                                    <option value="2" class="">দিন</option>
-                                    <option value="3" class="">মাস</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="button">
-                <button class="add_medecine btn btn-sm btn-success"> Add More</button>
-            </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-12 text-center">
-                    <button id ="print-btn" class="mt-5 print-btn btn btn-sm btn-success">Print Preccription</button>
+                    <button class="btn btn-sm btn-success print_btn"><i class="pr-2 fa-solid fa-print"></i>Print Prescription</button>
                 </div>
             </div>
         </div>
