@@ -8,9 +8,21 @@ h1{
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
+/* h6{
+    background: #b3b3b3;
+} */
+.px{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 @media print{
-    #print-btn{
+    .btn{
         display: none;
+    }
+    .form-control{
+        border: none;
+        margin-bottom: 3px;
     }
 }
